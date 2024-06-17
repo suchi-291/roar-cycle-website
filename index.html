@@ -20,6 +20,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
+    
+    <link rel="stylesheet" href="mediaqueries.css" />
+
 </head>
 
 <body>
@@ -29,28 +32,41 @@
                 <a href="index.html"><img src="images/logo-roar-bikes.png" alt="Logo image of Roar bikes"></a>
             </div>
 
+            <nav class="sidebar">
+                <div class="navbutton x" onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fa4083"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></div>
+                <div class="navbutton"><a href="#">Book Onsite Service</a></div>
+                <div class="navbutton"><a href="#">Book Parts Delivery</a></div>
+                <div class="navbutton"><a href="#">Request Callback</a></div>         
+                <div class="navbutton"><a href="#" >About</a></div>
+                <div class="navbutton"><a href="contact-us.html" >Contact</a></div>
+            </nav>
+
             <nav>
-                <div class="navbutton">
+                <div class="navbutton hideOnMobile">
 
                     <a href="#">Book Online</a>
 
                     <div class="dropdown">
 
-                        <div class="navbutton"><a href="#">Onsite Service</a></div>
+                        <div class="navbutton hideOnMobile"><a href="#">Onsite Service</a></div>
 
-                        <div class="navbutton"><a href="#">Parts Delivery</a></div>
+                        <div class="navbutton hideOnMobile"><a href="#">Parts Delivery</a></div>
 
-                        <div class="navbutton"><a href="#">Request Callback            
+                        <div class="navbutton hideOnMobile"><a href="#">Request Callback            
                             </a></div>
                     </div>
                 
                 
                 </div>
 
-                <div class="navbutton"><a href="#" >About</a></div>
+                <div class="navbutton hideOnMobile"><a href="#" >About</a></div>
 
-                <div class="navbutton">
+                <div class="navbutton hideOnMobile">
                     <a href="contact-us.html" >Contact</a>
+                </div>
+                
+                <div class="navbutton menuButton" onclick=showSidebar()>
+                    <a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
                 </div>
             </nav>
         </header>
@@ -138,7 +154,18 @@
         </div>
 
     </div>
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'flex';
+    }
 
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = 'none';
+    }
+
+</script>
 
 </body>
 

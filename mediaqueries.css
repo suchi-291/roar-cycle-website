@@ -1,0 +1,68 @@
+@media screen and (max-width: 800px) {
+    header nav .navbutton.hideOnMobile{
+        display: none;
+    }
+
+    header nav .navbutton.menuButton{
+        display: block;
+    }
+
+    .container {
+        width: 100%;
+    
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 100px;
+    }
+
+    header{
+        padding: 20px;
+    }
+    
+    main {
+        padding-top: 100px;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-bottom: 100px;
+        justify-content: center;        
+        padding-left: 20px;
+        padding-right: 20px;
+    
+    }
+
+    .herobox1{
+        width: 100%;
+        padding: 0;
+    }
+
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .card1, .card2, .card3{
+        width: 100%;
+    }
+    
+    .testimonials{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .tbox{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sidebar{
+        width:100%;
+    }
+}
